@@ -54,10 +54,39 @@ void tallHouseUnderMoon()
         glVertex3d(985.0,378.0,0.0);
     glEnd();
 
+    //tower
     glColor3f(1.0f,1.0f,1.0f);
      glBegin(GL_LINES);
         glVertex3d(1070.0,420.0,0.0);
-        glVertex3d(1070.0,500.0,0.0);
+        glVertex3d(1070.0,480.0,0.0);
+    glEnd();
+
+    //first line
+    glColor3f(0.0f,0.0f,0.0f);
+     glBegin(GL_LINES);
+        glVertex3d(987.0,376.0,0.0);
+        glVertex3d(1066.0,415.0,0.0);
+    glEnd();
+
+
+    glColor3f(0.0f,0.0f,0.0f);
+     glBegin(GL_LINES);
+        glVertex3d(1066.0,415.0,0.0);
+        glVertex3d(1153.0,376.0,0.0);
+    glEnd();
+
+    //second line
+    glColor3f(0.0f,0.0f,0.0f);
+     glBegin(GL_LINES);
+        glVertex3d(995.0,370,0.0);
+        glVertex3d(1070.0,403.0,0.0);
+    glEnd();
+
+
+    glColor3f(0.0f,0.0f,0.0f);
+     glBegin(GL_LINES);
+        glVertex3d(1070.0,403.0,0.0);
+        glVertex3d(1150.0,370.0,0.0);
     glEnd();
 
     glFlush();
