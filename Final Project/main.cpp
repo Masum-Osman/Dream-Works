@@ -17,7 +17,7 @@ void init(void)
 void circle_kon()    //aivaba kaj kora
 {
     glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer with current clearing color
-	glColor3f(0.80, .90, 0.90);
+	glColor3f(0.95f,0.9f,0.7f);
     glBegin(GL_POLYGON);
         for(int i=1;i<360;i++)     //360 kon
         {                                                                          //// y point=sin main point ; x point=cos main point
@@ -40,27 +40,8 @@ void circle_kon()    //aivaba kaj kora
 }
 
 
-void tallHouseUnderMoon()
+void insideFirstHouse()
 {
-    glColor3f(0.0f,1.0f,1.0f);
-
-    glBegin(GL_POLYGON);
-        glVertex3d(995.0,370.0,0.0);
-        glVertex3d(990.0,0.0,0.0);
-        glVertex3d(1160.0,0.0,0.0);
-        glVertex3d(1150.0,370.0,0.0);
-        glVertex3d(1155.0,378.0,0.0);
-        glVertex3d(1070.0,420.0,0.0);
-        glVertex3d(985.0,378.0,0.0);
-    glEnd();
-
-    //tower
-    glColor3f(1.0f,1.0f,1.0f);
-     glBegin(GL_LINES);
-        glVertex3d(1070.0,420.0,0.0);
-        glVertex3d(1070.0,480.0,0.0);
-    glEnd();
-
     //first line
     glColor3f(0.0f,0.0f,0.0f);
      glBegin(GL_LINES);
@@ -92,11 +73,81 @@ void tallHouseUnderMoon()
     glFlush();
 }
 
+
+void tallHouseUnderMoon()
+{
+    glColor3f(0.78f,0.91f,0.79f);
+
+    glBegin(GL_POLYGON);
+        glVertex3d(995.0,370.0,0.0);
+        glVertex3d(985.0,0.0,0.0);
+        glVertex3d(1165.0,0.0,0.0);
+        glVertex3d(1150.0,370.0,0.0);
+        glVertex3d(1155.0,378.0,0.0);
+        glVertex3d(1070.0,420.0,0.0);
+        glVertex3d(985.0,378.0,0.0);
+    glEnd();
+
+    //tower
+    glColor3f(1.0f,1.0f,1.0f);
+     glBegin(GL_LINES);
+        glVertex3d(1070.0,420.0,0.0);
+        glVertex3d(1070.0,480.0,0.0);
+    glEnd();
+
+    insideFirstHouse();
+
+    glFlush();
+}
+
+
+void secondMainTallHouse()
+{
+    glColor3f(0.8f,1.0f,0.7f);
+    glBegin(GL_POLYGON);
+        glVertex3d(200.0,0.0,0.0);
+        glVertex3d(400.0,0.0,0.0);
+        glVertex3d(400.0,370.0,0.0);
+        glVertex3d(200.0,410.0,0.0);
+        /*glVertex3d(55.0,78.0,0.0);
+        glVertex3d(70.0,20.0,0.0);
+        glVertex3d(85.0,78.0,0.0);*/
+    glEnd();
+
+    glFlush();
+}
+
+
+void lampPosts()
+{
+    glColor3f(0.4f,0.4f,0.4f);
+    glBegin(GL_POLYGON);
+        glVertex3d(1180.0,0.0,0.0);
+        glVertex3d(1185.0,0.0,0.0);
+        glVertex3d(1185.0,60.0,0.0);
+        glVertex3d(1180.0,60.0,0.0);
+    glEnd();
+
+
+    glColor3f(1.0f,1.0f,1.0f);
+    glBegin(GL_POLYGON);
+        glVertex3d(1183.0,60.0,0.0);
+        glVertex3d(1195.0,60.0,0.0);
+        glVertex3d(1195.0,65.0,0.0);
+        glVertex3d(1183.0,65.0,0.0);
+    glEnd();
+
+
+    glFlush();
+}
+
 void buildHouse(void)
 {
 
     circle_kon();
     tallHouseUnderMoon();
+    secondMainTallHouse();
+    lampPosts();
 }
 
 int main(int argc, char** argv)

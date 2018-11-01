@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1540657389 source:f:\codes\c programmes\graphics project\final project\main.cpp
+1540906848 source:f:\codes\c programmes\graphics project\final project\main.cpp
 	<windows.h>
 	<GL\glut.h>
 	<stdlib.h>
