@@ -126,8 +126,8 @@ void secondMainTallHouse()
     glBegin(GL_POLYGON);
         glVertex3d(210.0,330.0,0.0);
         glVertex3d(260.0,370.0,0.0);
-        glVertex3d(260.0,420.0,0.0);
-        glVertex3d(210.0,395.0,0.0);
+        glVertex3d(260.0,410.0,0.0);
+        glVertex3d(210.0,385.0,0.0);
     glEnd();
 
 
@@ -137,7 +137,7 @@ void secondMainTallHouse()
         glVertex3d(260.0,370.0,0.0);
         glVertex3d(360.0,355.0,0.0);
         glVertex3d(360.0,405.0,0.0);
-        glVertex3d(260.0,420.0,0.0);
+        glVertex3d(260.0,410.0,0.0);
     glEnd();
 
     //middle line of down building
@@ -214,7 +214,7 @@ void mainLine(void)
     //middle line connecting two buildings
     glColor3f(1.0f,1.0f,1.0f);
      glBegin(GL_LINES);
-        glVertex3d(357.0,405.0,0.0);
+        glVertex3d(357.0,404.0,0.0);
         glVertex3d(1043.0,405.0,0.0);
     glEnd();
 
