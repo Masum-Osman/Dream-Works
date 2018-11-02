@@ -165,7 +165,7 @@ void thirdleftbuilding()
     //whole first building
     glColor3f(0.5f,0.9f,0.9f);
     glBegin(GL_POLYGON);
-        glVertex3d(74.0,0.0,0.0);
+        glVertex3d(76.0,0.0,0.0);
         glVertex3d(185.0,0.0,0.0);
         glVertex3d(188.0,90.0,0.0);
         glVertex3d(100.0,90.0,0.0);
@@ -215,7 +215,7 @@ void mainLine(void)
     glColor3f(1.0f,1.0f,1.0f);
      glBegin(GL_LINES);
         glVertex3d(357.0,404.0,0.0);
-        glVertex3d(1043.0,405.0,0.0);
+        glVertex3d(1043.0,404.0,0.0);
     glEnd();
 
     glFlush();
