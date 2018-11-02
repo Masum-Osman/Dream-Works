@@ -14,15 +14,15 @@ void init(void)
 
 
 
-void circle_kon()    //aivaba kaj kora
+void circle_kon()    //moon
 {
     glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer with current clearing color
 	glColor3f(0.95f,0.9f,0.7f);
     glBegin(GL_POLYGON);
         for(int i=1;i<360;i++)     //360 kon
-        {                                                                          //// y point=sin main point ; x point=cos main point
-            glVertex2f(1200+120*cos(3.14159*i/180),630+120*sin(3.14159*i/180));       //main point + radius
-        }                                                                            //3.14159*i/180   convert degree to radian
+        {
+            glVertex2f(1200+120*cos(3.14159*i/180),630+120*sin(3.14159*i/180));
+        }
         glEnd();
 
 
@@ -30,9 +30,9 @@ void circle_kon()    //aivaba kaj kora
 	glColor3f(0.1, 0.1, 0.2);
     glBegin(GL_POLYGON);
         for(int i=1;i<360;i++)     //360 kon
-        {                                                                          //// y point=sin main point ; x point=cos main point
-            glVertex2f(1220+120*cos(3.14159*i/180),655+120*sin(3.14159*i/180));       //main point + radius
-        }                                                                            //3.14159*i/180   convert degree to radian
+        {
+            glVertex2f(1220+120*cos(3.14159*i/180),655+120*sin(3.14159*i/180));
+        }
         glEnd();
 
     glFlush();
@@ -103,16 +103,83 @@ void tallHouseUnderMoon()
 
 void secondMainTallHouse()
 {
+    //buildings left side
     glColor3f(0.8f,1.0f,0.7f);
     glBegin(GL_POLYGON);
-        glVertex3d(200.0,0.0,0.0);
-        glVertex3d(400.0,0.0,0.0);
-        glVertex3d(400.0,370.0,0.0);
-        glVertex3d(200.0,410.0,0.0);
-        /*glVertex3d(55.0,78.0,0.0);
-        glVertex3d(70.0,20.0,0.0);
-        glVertex3d(85.0,78.0,0.0);*/
+        glVertex3d(185.0,0.0,0.0);
+        glVertex3d(270.0,0.0,0.0);
+        glVertex3d(260.0,370.0,0.0);
+        glVertex3d(195.0,340.0,0.0);
     glEnd();
+
+    //buildings right side
+    glColor3f(0.8f,1.0f,0.7f);
+    glBegin(GL_POLYGON);
+        glVertex3d(270.0,0.0,0.0);
+        glVertex3d(400.0,0.0,0.0);
+        glVertex3d(380.0,355.0,0.0);
+        glVertex3d(260.0,370.0,0.0);
+    glEnd();
+
+    //left side roof
+    glColor3f(0.8f,1.0f,0.7f);
+    glBegin(GL_POLYGON);
+        glVertex3d(210.0,330.0,0.0);
+        glVertex3d(260.0,370.0,0.0);
+        glVertex3d(260.0,420.0,0.0);
+        glVertex3d(210.0,395.0,0.0);
+    glEnd();
+
+
+    //right side roof
+    glColor3f(0.8f,1.0f,0.7f);
+    glBegin(GL_POLYGON);
+        glVertex3d(260.0,370.0,0.0);
+        glVertex3d(360.0,355.0,0.0);
+        glVertex3d(360.0,405.0,0.0);
+        glVertex3d(260.0,420.0,0.0);
+    glEnd();
+
+    //middle line of down building
+    glColor3f(0.0f,0.0f,0.0f);
+     glBegin(GL_LINES);
+        glVertex3d(260.0,350,0.0);
+        glVertex3d(270.0,0.0,0.0);
+    glEnd();
+
+
+    //middle line of up building
+    glColor3f(0.0f,0.0f,0.0f);
+     glBegin(GL_LINES);
+        glVertex3d(262.0,360.0,0.0);
+        glVertex3d(260.0,420.0,0.0);
+    glEnd();
+
+
+    glFlush();
+}
+
+
+void thirdleftbuilding()
+{
+    //whole first building
+    glColor3f(0.5f,0.9f,0.9f);
+    glBegin(GL_POLYGON);
+        glVertex3d(74.0,0.0,0.0);
+        glVertex3d(185.0,0.0,0.0);
+        glVertex3d(188.0,90.0,0.0);
+        glVertex3d(100.0,90.0,0.0);
+        glVertex3d(80.0,80.0,0.0);
+    glEnd();
+
+
+    //line of the building
+    glColor3f(0.0f,0.0f,1.0f);
+     glBegin(GL_LINES);
+        glVertex3d(100.0,0.0,0.0);
+        glVertex3d(100.0,90.0,0.0);
+    glEnd();
+
 
     glFlush();
 }
@@ -141,13 +208,28 @@ void lampPosts()
     glFlush();
 }
 
+
+void mainLine(void)
+{
+    //middle line connecting two buildings
+    glColor3f(1.0f,1.0f,1.0f);
+     glBegin(GL_LINES);
+        glVertex3d(357.0,405.0,0.0);
+        glVertex3d(1043.0,405.0,0.0);
+    glEnd();
+
+    glFlush();
+}
+
 void buildHouse(void)
 {
 
     circle_kon();
     tallHouseUnderMoon();
     secondMainTallHouse();
+    thirdleftbuilding();
     lampPosts();
+    mainLine();
 }
 
 int main(int argc, char** argv)
