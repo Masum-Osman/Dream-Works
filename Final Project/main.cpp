@@ -113,6 +113,7 @@ void secondMainTallHouse()
     glBegin(GL_POLYGON);
         glVertex3d(185.0,0.0,0.0);
         glVertex3d(270.0,0.0,0.0);
+    glColor3f(0.5f,0.61f,0.5f);
         glVertex3d(260.0,370.0,0.0);
         glVertex3d(195.0,340.0,0.0);
     glEnd();
@@ -122,16 +123,17 @@ void secondMainTallHouse()
     glBegin(GL_POLYGON);
         glVertex3d(270.0,0.0,0.0);
         glVertex3d(400.0,0.0,0.0);
-    glColor3f(0.9f,0.9f,0.7f);
+    glColor3f(1.0f,1.0f,1.0f);
         glVertex3d(380.0,355.0,0.0);
         glVertex3d(260.0,370.0,0.0);
     glEnd();
 
     //left side roof
-    glColor3f(0.68f,0.79f,0.96f);
+    glColor3f(0.5f,0.61f,0.5f);
     glBegin(GL_POLYGON);
         glVertex3d(210.0,330.0,0.0);
         glVertex3d(260.0,370.0,0.0);
+    glColor3f(0.5f,0.61f,0.5f);
         glVertex3d(260.0,410.0,0.0);
         glVertex3d(210.0,385.0,0.0);
     glEnd();
@@ -176,13 +178,17 @@ void thirdleftbuilding()
     //whole first building
 
     glBegin(GL_POLYGON);
-    glColor3f(0.5f,0.5f,0.9f);
+    glColor3f(0.9f,0.9f,0.7f);
         glVertex3d(76.0,0.0,0.0);
-    glColor3f(0.3f,0.3f,0.7f);
+    glColor3f(0.3f,0.3f,0.6f);
         glVertex3d(185.0,0.0,0.0);
         glVertex3d(188.0,90.0,0.0);
         glVertex3d(100.0,90.0,0.0);
         glVertex3d(80.0,80.0,0.0);
+     //glColor3f(0.5f,0.5f,0.5f);
+
+
+
     glEnd();
 
 
