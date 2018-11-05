@@ -40,7 +40,7 @@ void circle_kon()    //moon
 }
 
 
-void insideFirstHouse()
+void insidetallHouseUnderMoon()
 {
     //first line
     glColor3f(0.0f,0.0f,0.0f);
@@ -81,7 +81,7 @@ void tallHouseUnderMoon()
     glBegin(GL_POLYGON);
     glColor3f(0.9f,0.9f,0.7f);
         glVertex3d(995.0,370.0,0.0);
-    glColor3f(0.5f,0.61f,0.5f);
+    glColor3f(0.0f,0.61f,0.5f);
         glVertex3d(985.0,0.0,0.0);
         glVertex3d(1165.0,0.0,0.0);
 
@@ -100,7 +100,7 @@ void tallHouseUnderMoon()
         glVertex3d(1070.0,480.0,0.0);
     glEnd();
 
-    insideFirstHouse();
+    insidetallHouseUnderMoon();
 
     glFlush();
 }
@@ -109,7 +109,7 @@ void tallHouseUnderMoon()
 void secondMainTallHouse()
 {
     //buildings left side
-    glColor3f(0.68f,0.79f,0.96f);
+    glColor3f(0.3f,0.3f,0.46f);
     glBegin(GL_POLYGON);
         glVertex3d(185.0,0.0,0.0);
         glVertex3d(270.0,0.0,0.0);
@@ -119,7 +119,7 @@ void secondMainTallHouse()
     glEnd();
 
     //buildings right side
-    glColor3f(0.68f,0.79f,0.96f);
+    glColor3f(0.3f,0.3f,0.46f);
     glBegin(GL_POLYGON);
         glVertex3d(270.0,0.0,0.0);
         glVertex3d(400.0,0.0,0.0);
@@ -178,10 +178,11 @@ void thirdleftbuilding()
     //whole first building
 
     glBegin(GL_POLYGON);
-    glColor3f(0.9f,0.9f,0.7f);
+    glColor3f(0.6f,0.6f,0.6f);
         glVertex3d(76.0,0.0,0.0);
-    glColor3f(0.3f,0.3f,0.6f);
         glVertex3d(185.0,0.0,0.0);
+
+    glColor3f(0.3f,0.3f,0.6f);
         glVertex3d(188.0,90.0,0.0);
         glVertex3d(100.0,90.0,0.0);
         glVertex3d(80.0,80.0,0.0);
