@@ -60,6 +60,8 @@ void insidetallHouseUnderMoon()
     glColor3f(0.0f,0.0f,0.0f);
      glBegin(GL_LINES);
         glVertex3d(995.0,370,0.0);
+    //color
+    glColor3f(0.3f,0.3f,0.46f);
         glVertex3d(1070.0,403.0,0.0);
     glEnd();
 
@@ -68,6 +70,19 @@ void insidetallHouseUnderMoon()
      glBegin(GL_LINES);
         glVertex3d(1070.0,403.0,0.0);
         glVertex3d(1150.0,370.0,0.0);
+    glEnd();
+
+    //vertical inside lines 1
+    glColor3f(0.0f,0.0f,0.0f);
+     glBegin(GL_LINES);
+        glVertex3d(1080.0,410.0,0.0);
+        glVertex3d(1088.0,0.0,0.0);
+    glEnd();
+    //vertical inside lines 2
+    glColor3f(0.0f,0.0f,0.0f);
+     glBegin(GL_LINES);
+        glVertex3d(1060.0,410.0,0.0);
+        glVertex3d(1056.0,0.0,0.0);
     glEnd();
 
     glFlush();
