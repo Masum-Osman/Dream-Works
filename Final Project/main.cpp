@@ -3,6 +3,10 @@
 #include <stdlib.h>
 #include <math.h>
 
+static float	tx	=  0.0;
+static float	ty	=  0.0;
+
+
 void init(void)
 {
 	glClearColor(0.1, 0.1, 0.2, 0.0);
@@ -12,7 +16,28 @@ void init(void)
 
 }
 
+void walkingMan(void)
+{
+    glColor3f(0, 1, 1.0);        // Set foreground color & has 3 attribute with range (0-1) or (0f-1f)
+	glBegin(GL_QUADS);  //start square
+	glVertex2i(tx+360, ty+404);
+	glVertex2i(tx+370, ty+404);
+	glVertex2i(tx+370, ty+430);
+	glVertex2i(tx+360, ty+430);
+	glEnd();   //end square
 
+    glFlush();
+
+	glutSwapBuffers();
+			tx++;
+			Sleep(50);
+			if(tx==680)
+            {
+                tx	=  0.0;
+            }
+			glutPostRedisplay();
+
+}
 
 void circle_kon()    //moon
 {
@@ -115,7 +140,6 @@ void tallHouseUnderMoon()
         glVertex3d(1070.0,480.0,0.0);
     glEnd();
 
-    insidetallHouseUnderMoon();
 
     glFlush();
 }
@@ -246,6 +270,7 @@ void lampPosts()
 
 void mainLine(void)
 {
+
     //middle line connecting two buildings
     glColor3f(1.0f,1.0f,1.0f);
      glBegin(GL_LINES);
@@ -255,6 +280,8 @@ void mainLine(void)
 
     glFlush();
 }
+
+
 
 /*
 void colorCheck()
@@ -274,13 +301,15 @@ void colorCheck()
 
 void buildHouse(void)
 {
-
+    glClear(GL_COLOR_BUFFER_BIT);
     circle_kon();
     tallHouseUnderMoon();
+    insidetallHouseUnderMoon();
     secondMainTallHouse();
     thirdleftbuilding();
     lampPosts();
     mainLine();
+    walkingMan();
     //colorCheck();
 }
 
