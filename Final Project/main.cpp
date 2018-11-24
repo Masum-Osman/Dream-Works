@@ -6,14 +6,11 @@
 static float	tx	=  0.0;
 static float	ty	=  0.0;
 
-
 void init(void)
 {
 	glClearColor(0.1, 0.1, 0.2, 0.0);
 	glMatrixMode(GL_PROJECTION);
-	//gluOrtho2D(0, 500, 0, 500);
 	gluOrtho2D(0, 1500, 0, 900);
-
 }
 
 void walkingMan(void)
@@ -100,13 +97,13 @@ void insidetallHouseUnderMoon()
     //vertical inside lines 1
     glColor3f(0.0f,0.0f,0.0f);
      glBegin(GL_LINES);
-        glVertex3d(1080.0,410.0,0.0);
+        glVertex3d(1080.0,400.0,0.0);
         glVertex3d(1088.0,0.0,0.0);
     glEnd();
     //vertical inside lines 2
     glColor3f(0.0f,0.0f,0.0f);
      glBegin(GL_LINES);
-        glVertex3d(1060.0,410.0,0.0);
+        glVertex3d(1060.0,400.0,0.0);
         glVertex3d(1056.0,0.0,0.0);
     glEnd();
 
@@ -128,6 +125,7 @@ void tallHouseUnderMoon()
     glColor3f(0.9f,0.9f,0.7f);
         glVertex3d(1150.0,370.0,0.0);
         glVertex3d(1155.0,378.0,0.0);
+    glColor3f(0.0f,0.61f,0.5f);
         glVertex3d(1070.0,420.0,0.0);
         glVertex3d(985.0,378.0,0.0);
 
@@ -161,6 +159,8 @@ void secondMainTallHouse()
     glColor3f(0.3f,0.3f,0.46f);
     glBegin(GL_POLYGON);
         glVertex3d(270.0,0.0,0.0);
+
+    glColor3f(0.6f,0.6f,0.6f);
         glVertex3d(400.0,0.0,0.0);
     glColor3f(1.0f,1.0f,1.0f);
         glVertex3d(380.0,355.0,0.0);
@@ -246,6 +246,7 @@ void thirdleftbuilding()
 
 void lampPosts()
 {
+    //first
     glColor3f(0.4f,0.4f,0.4f);
     glBegin(GL_POLYGON);
         glVertex3d(1180.0,0.0,0.0);
@@ -263,6 +264,59 @@ void lampPosts()
         glVertex3d(1183.0,65.0,0.0);
     glEnd();
 
+    //second
+    glColor3f(0.4f,0.4f,0.4f);
+    glBegin(GL_POLYGON);
+        glVertex3d(780.0,0.0,0.0);
+        glVertex3d(785.0,0.0,0.0);
+        glVertex3d(785.0,60.0,0.0);
+        glVertex3d(780.0,60.0,0.0);
+    glEnd();
+
+
+    glColor3f(1.0f,1.0f,1.0f);
+    glBegin(GL_POLYGON);
+        glVertex3d(783.0,60.0,0.0);
+        glVertex3d(795.0,60.0,0.0);
+        glVertex3d(795.0,65.0,0.0);
+        glVertex3d(783.0,65.0,0.0);
+    glEnd();
+
+    //third
+    glColor3f(0.4f,0.4f,0.4f);
+    glBegin(GL_POLYGON);
+        glVertex3d(380.0,0.0,0.0);
+        glVertex3d(385.0,0.0,0.0);
+        glVertex3d(385.0,60.0,0.0);
+        glVertex3d(380.0,60.0,0.0);
+    glEnd();
+
+
+    glColor3f(1.0f,1.0f,1.0f);
+    glBegin(GL_POLYGON);
+        glVertex3d(383.0,60.0,0.0);
+        glVertex3d(395.0,60.0,0.0);
+        glVertex3d(395.0,65.0,0.0);
+        glVertex3d(383.0,65.0,0.0);
+    glEnd();
+
+    //fourth
+    glColor3f(0.4f,0.4f,0.4f);
+    glBegin(GL_POLYGON);
+        glVertex3d(010.0,0.0,0.0);
+        glVertex3d(15.0,0.0,0.0);
+        glVertex3d(15.0,60.0,0.0);
+        glVertex3d(10.0,60.0,0.0);
+    glEnd();
+
+
+    glColor3f(1.0f,1.0f,1.0f);
+    glBegin(GL_POLYGON);
+        glVertex3d(13.0,60.0,0.0);
+        glVertex3d(25.0,60.0,0.0);
+        glVertex3d(25.0,65.0,0.0);
+        glVertex3d(13.0,65.0,0.0);
+    glEnd();
 
     glFlush();
 }
@@ -281,6 +335,30 @@ void mainLine(void)
     glFlush();
 }
 
+
+void lastBuilding()
+{
+    glBegin(GL_POLYGON);
+    glColor3f(0.19f,0.29f,0.19f);
+        glVertex3d(425.0,0.0,0.0);
+        glVertex3d(550.0,0.0,0.0);
+    glColor3f(1.0f,1.0f,1.0f);
+        glVertex3d(540.0,200.0,0.0);
+
+    glColor3f(0.39f,0.79f,0.5f);
+        glVertex3d(460.0,210.0,0.0);
+        glVertex3d(428.0,200.0,0.0);
+    glEnd();
+
+
+    glColor3f(0.0f,0.0f,0.0f);
+     glBegin(GL_LINES);
+        glVertex3d(460.0,210.0,0.0);
+        glVertex3d(460.0,0.0,0.0);
+    glEnd();
+
+    glFlush();
+}
 
 
 /*
@@ -309,7 +387,8 @@ void buildHouse(void)
     thirdleftbuilding();
     lampPosts();
     mainLine();
-    walkingMan();
+    //walkingMan();
+    lastBuilding();
     //colorCheck();
 }
 
