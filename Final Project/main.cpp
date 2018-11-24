@@ -23,7 +23,7 @@ void walkingMan(void)
 	glVertex2i(tx+360, ty+430);
 	glEnd();   //end square
 
-    glFlush();
+     glFlush();
 
 	glutSwapBuffers();
 			tx++;
@@ -32,7 +32,7 @@ void walkingMan(void)
             {
                 tx	=  0.0;
             }
-			glutPostRedisplay();
+    glutPostRedisplay();
 
 }
 
@@ -387,15 +387,16 @@ void buildHouse(void)
     thirdleftbuilding();
     lampPosts();
     mainLine();
-    //walkingMan();
     lastBuilding();
+    walkingMan();
+
     //colorCheck();
 }
 
 int main(int argc, char** argv)
 {
 	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
 	glutInitWindowPosition(0, 0);
 	glutInitWindowSize(1000, 600);
 	glutCreateWindow("House Section OpenGL");
@@ -403,5 +404,3 @@ int main(int argc, char** argv)
 	glutDisplayFunc(buildHouse);
 	glutMainLoop();
 }
-
-
