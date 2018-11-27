@@ -24,7 +24,7 @@ void walkingMan(void)
 	glVertex2i(tx+360, ty+430);
 	glEnd();   //end square
 
-     glFlush();
+    glFlush();
 
 	glutSwapBuffers();
 			tx++;
@@ -404,5 +404,4 @@ int main(int argc, char** argv)
 	init();
 	glutDisplayFunc(buildHouse);
 	glutMainLoop();
-
 }
