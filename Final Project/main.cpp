@@ -240,6 +240,95 @@ void thirdleftbuilding()
         glVertex3d(100.0,90.0,0.0);
     glEnd();
 
+    //vertical lines 1
+    glColor3f(0.95f,0.9f,0.7f);
+    glBegin(GL_POLYGON);
+        glVertex3d(110.0,82.0,0.0);
+        glVertex3d(115.0,82.0,0.0);
+        glVertex3d(115.0,8.0,0.0);
+        glVertex3d(110.0,8.0,0.0);
+    glEnd();
+
+    //vertical lines 2
+    glColor3f(0.95f,0.9f,0.7f);
+    glBegin(GL_POLYGON);
+        glVertex3d(125.0,82.0,0.0);
+        glVertex3d(130.0,82.0,0.0);
+        glVertex3d(130.0,8.0,0.0);
+        glVertex3d(125.0,8.0,0.0);
+    glEnd();
+
+    //vertical lines 3
+    glColor3f(0.95f,0.9f,0.7f);
+    glBegin(GL_POLYGON);
+        glVertex3d(140.0,82.0,0.0);
+        glVertex3d(145.0,82.0,0.0);
+        glVertex3d(145.0,8.0,0.0);
+        glVertex3d(140.0,8.0,0.0);
+    glEnd();
+
+    //vertical lines 4
+    glColor3f(0.95f,0.9f,0.7f);
+    glBegin(GL_POLYGON);
+        glVertex3d(155.0,82.0,0.0);
+        glVertex3d(160.0,82.0,0.0);
+        glVertex3d(160.0,8.0,0.0);
+        glVertex3d(155.0,8.0,0.0);
+    glEnd();
+
+    //vertical lines 4
+    glColor3f(0.95f,0.9f,0.7f);
+    glBegin(GL_POLYGON);
+        glVertex3d(170.0,82.0,0.0);
+        glVertex3d(175.0,82.0,0.0);
+        glVertex3d(175.0,8.0,0.0);
+        glVertex3d(170.0,8.0,0.0);
+    glEnd();
+
+    //vertical lines 5
+    glColor3f(0.95f,0.9f,0.7f);
+    glBegin(GL_POLYGON);
+        glVertex3d(88.0,73.0,0.0);
+        glVertex3d(93.0,75.0,0.0);
+        glVertex3d(93.0,8.0,0.0);
+        glVertex3d(88.0,7.0,0.0);
+    glEnd();
+
+    //horizontal lines 1
+    glColor3f(0.6f,0.6f,0.6f);
+    glBegin(GL_POLYGON);
+        glVertex3d(110.0,18.0,0.0);
+        glVertex3d(175.0,18.0,0.0);
+        glVertex3d(175.0,27.0,0.0);
+        glVertex3d(110.0,27.0,0.0);
+    glEnd();
+
+    //horizontal lines 2
+    glColor3f(0.6f,0.6f,0.6f);
+    glBegin(GL_POLYGON);
+        glVertex3d(110.0,38.0,0.0);
+        glVertex3d(175.0,38.0,0.0);
+        glVertex3d(175.0,47.0,0.0);
+        glVertex3d(110.0,47.0,0.0);
+    glEnd();
+
+    //horizontal lines 3
+    glColor3f(0.6f,0.6f,0.6f);
+    glBegin(GL_POLYGON);
+        glVertex3d(110.0,58.0,0.0);
+        glVertex3d(175.0,58.0,0.0);
+        glVertex3d(175.0,67.0,0.0);
+        glVertex3d(110.0,67.0,0.0);
+    glEnd();
+
+    /*//horizontal lines 4
+    glColor3f(0.6f,0.6f,0.6f);
+    glBegin(GL_POLYGON);
+        glVertex3d(110.0,58.0,0.0);
+        glVertex3d(175.0,58.0,0.0);
+        glVertex3d(175.0,67.0,0.0);
+        glVertex3d(110.0,67.0,0.0);
+    glEnd();*/
 
     glFlush();
 }
