@@ -11,7 +11,7 @@ void init(void)
 	glClearColor(0.1, 0.1, 0.2, 0.0);
 	glMatrixMode(GL_PROJECTION);
 	gluOrtho2D(0, 1500, 0, 900);
-	PlaySound("James Bond.wav", NULL, SND_ASYNC|SND_FILENAME|SND_LOOP);
+	//PlaySound("James Bond.wav", NULL, SND_ASYNC|SND_FILENAME|SND_LOOP);
 }
 
 void walkingMan(void)
